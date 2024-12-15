@@ -205,6 +205,84 @@ ul {
   li a:hover {
     background-color: #b84c65;
   }
+    @media only screen and (max-width: 768px) {
+  ul {
+    flex-direction: column;
+    height: auto;
+  }
+
+  ul img {
+    width: 120px;
+    height: 80px;
+  }
+
+  .produtos img{
+    width: 180px;
+  }
+
+  #titulo {
+    font-size: 28px;
+  }
+
+  #texto {
+    font-size: 16px;
+  }
+
+  .textbox {
+    margin: 20px;
+    width: auto;
+  }
+  #produtos{
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  #produtos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+    justify-items: center;
+  }
+}
+@media only screen and (min-width: 1920){
+  #produtos{
+   display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+    justify-items: center;
+ }
+  #produtos .produtos:nth-child(3) {
+    grid-column: span 1; 
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 1025px) {
+ #produtos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .produtos img{
+    width: 150px;
+  }
+
+  .textbox {
+    width: auto;
+    padding: 10px;
+  }
+
+  #titulo {
+    font-size: 24px;
+  }
+
+  #texto {
+    font-size: 14px;
+  }
+}
     </style>
 </head>
 <body>
